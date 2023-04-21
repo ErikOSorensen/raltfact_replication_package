@@ -1,0 +1,29 @@
+13c13
+< global dir "~/Dropbox/Sharing Fake News/REPLICATION_FINAL"
+---
+> global dir : pwd
+53,60c53,60
+< cap ssc install estout.ado
+< cap ssc install esttab.ado
+< cap ssc install eststo.ado
+< cap ssc install estadd.ado
+< cap ssc install estpost.ado
+< cap ssc install cibar.ado 
+< cap net install grc1leg.pkg
+< cap ssc install outreg2.ado
+---
+> cap ssc install estout
+> cap ssc install esttab
+> cap ssc install eststo
+> cap ssc install estadd
+> cap ssc install estpost
+> cap ssc install cibar
+> cap net install grc1leg.pkg, from(http://www.stata.com/users/vwiggins/)
+> cap ssc install outreg2
+84a85,90
+> 
+> **********************************************************************************************************
+> *  Added by Beeder and Sørensen: Test for overlap in variables/observations between lasso and controls
+> **********************************************************************************************************
+> 
+> do "$dir/dofiles/BS_overlap.do"

@@ -1,0 +1,6 @@
+45,46d44
+< 	* Filter on the duration of the survey:
+< 	keep if durationinseconds >= 250
+387,388d384
+< * Filter on the duration of the survey:
+< keep if durationinseconds > 250

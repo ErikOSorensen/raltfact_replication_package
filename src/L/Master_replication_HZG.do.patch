@@ -1,0 +1,23 @@
+13c13,14
+< global dir "~/Dropbox/Sharing Fake News/REPLICATION_FINAL"
+---
+> global dir : pwd
+> set maxvar 20000
+53,60c54,61
+< cap ssc install estout.ado
+< cap ssc install esttab.ado
+< cap ssc install eststo.ado
+< cap ssc install estadd.ado
+< cap ssc install estpost.ado
+< cap ssc install cibar.ado 
+< cap net install grc1leg.pkg
+< cap ssc install outreg2.ado
+---
+> cap ssc install estout
+> cap ssc install esttab
+> cap ssc install eststo
+> cap ssc install estadd
+> cap ssc install estpost
+> cap ssc install cibar
+> cap net install grc1leg.pkg, from(http://www.stata.com/users/vwiggins/)
+> cap ssc install outreg2

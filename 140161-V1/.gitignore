@@ -1,0 +1,8 @@
+140161-V1.zip
+dofiles/
+Master_replication_HZG.do
+original_data/
+README.pdf
+rm -rf $BASE/variants
+
+

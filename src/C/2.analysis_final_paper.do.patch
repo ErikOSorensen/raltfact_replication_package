@@ -1,0 +1,138 @@
+33a34,42
+> **************************************************************************************
+> **** Alternative set of controls for consistency between lasso predictions and controls
+> **************************************************************************************
+> **** First section: Taken from the macro part of the original code, but with first_macron_full
+> global BS1 "age village city educ male born_france father_born_france mother_born_france married single income_missing income_full children use_FB log_nb_friends_fb often_share_fb share_interest share_influence share_image share_reciprocity  tv_main_source internet_main_source  altruism  reciprocity image money_charity  give_money  work_charity donate_blood  religious catholic muslim close_gov_europe close_gov_france first_mlp  second_mlp negative_image_UE first_macron_full"
+> **** Second section: Taken from the control regression reported on outcomes - prediction.
+> **** Income removed (better handled in BS1)
+> global BS2 "male low_educ mid_educ second_mlp negative_image_UE use_FB often_share_fb log_nb_friends_fb share_interest share_influence share_image share_reciprocity  altruism reciprocity image mid_educ high_educ old mid_age age age_sqrd male born_france  village city father_born_france mother_born_france married single children use_FB log_nb_friends_fb often_share_fb share_interest share_influence share_image share_reciprocity  tv_main_source internet_main_source radio_main_source papers_main_source  altruism  reciprocity image money_charity  give_money  work_charity donate_blood  religious very_religious catholic muslim close_gov_europe close_gov_france negative_image_UE first_mlp_full  first_macron_full second_mlp registered_vote  i_region1 i_region2 i_region3 i_region4 i_region5 i_region6 i_region7 i_region8 i_region9 i_region10 i_region11 i_region12 i_region13"
+> global BS $BS1 $BS2
+186c195
+< foreach var in $pre_treatment_vars{
+---
+> foreach var in $BS {
+197c206
+< lasso linear want_share_alt_facts  $pre_treatment_vars if survey==1&restriction==1 ,  selection(adaptive) rseed(1234)
+---
+> lasso linear want_share_alt_facts  $BS i.educ if survey==1&restriction==1 ,  selection(adaptive) rseed(1234)
+775c784
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel dec(10) adec(10) noaster noparen nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey) 
+785c794
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+796c805
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+799c808
+< reg want_share_fb i.survey   $strata $strata1 $socio $vote $fb   $reported  $behavioral i.educ $pre_treatment_vars_all if survey<4, r
+---
+> reg want_share_fb i.survey  $BS i.educ if survey<4, r
+808c817
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+818c827
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+828c837
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+838c847
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+840c849
+< reg share_click2 i.survey   $strata $strata1 $socio $vote $fb   $reported  $behavioral i.educ $pre_treatment_vars_all if survey<4, r
+---
+> reg share_click2 i.survey  $BS i.educ if survey<4, r
+848c857
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+866c875
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr)  keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr)  keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+874c883
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+884c893
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+886c895
+< reg want_share_facts i.survey   $strata $strata1 $socio $vote $fb   $reported  $behavioral i.educ $pre_treatment_vars_all if survey<4&survey>1, r
+---
+> reg want_share_facts i.survey $BS i.educ if survey<4&survey>1, r
+892c901
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+900c909
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+908c917
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+916c925
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+918c927
+< reg share_facts_click2 i.survey   $strata $strata1 $socio $vote $fb   $reported  $behavioral i.educ $pre_treatment_vars_all if survey<4&survey>1, r
+---
+> reg share_facts_click2 i.survey  $BS i.educ if survey<4&survey>1, r
+924c933
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+957c966
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+973c982
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+989c998
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+991c1000
+< reg diff_act_pred_want_sh_AF i.survey_alt   $strata $strata1 $socio $vote $fb   $reported  $behavioral i.educ $pre_treatment_vars_all if survey<4, r
+---
+> reg diff_act_pred_want_sh_AF i.survey_alt  $BS i.educ if survey<4, r
+1005c1014
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+1021c1030
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+1037c1046
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+1053c1062
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+1055c1064
+< reg diff_act_pred_sh_AF i.survey_alt   $strata $strata1 $socio $vote $fb   $reported  $behavioral i.educ $pre_treatment_vars_all if survey<4, r
+---
+> reg diff_act_pred_sh_AF i.survey_alt $BS i.educ if survey<4, r
+1069c1078
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 

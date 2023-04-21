@@ -1,0 +1,96 @@
+775c775
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel dec(10) adec(10) noaster noparen nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey) 
+785c785
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+796c796
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+808c808
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+818c818
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+828c828
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+838c838
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+848c848
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV alt-facts treatment, y_contr, pvalue, p_2_3) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)  
+866c866
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr)  keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr)  keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+874c874
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+884c884
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+892c892
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+900c900
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+908c908
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+916c916
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+924c924
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV imposed FC treatment, y_contr) keep(1.survey 2.survey 3.survey) sortvar(1.survey 2.survey 3.survey)
+957c957
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", replace label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+973c973
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+989c989
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+1005c1005
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+1021c1021
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+1037c1037
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+1053c1053
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+1069c1069
+< outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel bdec(3) tdec(3) sdec(3) nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 
+---
+> outreg2 using "$dir/results/tables/`TabATE_all'.xls", append label tex excel dec(10) adec(10) noaster noparen nocon nonotes adds(Mean DV Alt-Facts T, y_contr, Mean predicted Alt-Facts T, y_pred, Mean predicted imposed, y_pred2, Mean predicted viewer, y_pred3, Mean predicted nonviewer, y_pred4  ) keep(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) sortvar(1.survey_alt 2.survey_alt 3.survey_alt 4.survey_alt ) 

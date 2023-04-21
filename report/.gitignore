@@ -1,3 +1,4 @@
+*.tex
 *.aux
 *.lof
 *.log
@@ -12,7 +13,6 @@
 .*.lb
 *.bbl
 *.blg
-raltfact.pdf
 *.fdb_latexmk
 *.synctex.gz
 

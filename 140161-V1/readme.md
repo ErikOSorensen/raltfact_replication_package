@@ -1,4 +1,4 @@
-# Unpack original replication package here
+# Save the original replication package here
 
 In this directory, one should save the original replication package,
 `140161-V1.zip`, with md5sum: 615f8207efd527d572f32068adfeaaf0

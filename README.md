@@ -23,14 +23,14 @@ The patches we distribute are licensed with a BSD 3-Clause License (enclosed as 
 The replication results were calculated using the following computer and software:
 
 - Intel Xeon E-2136 processor (6 cores), 40GB RAM.
-- Ubuntu 20.04.5 LTS. GNU bash 5.0.17, GNU diffutils 3.7 and GNU patch 2.7.6.
+- Ubuntu 22.04.2 LTS. GNU bash 5.1.16, GNU diffutils 3.8 and GNU patch 2.7.6.
   Other versions of the GNU utils should not create issues, they are used in quite trivial ways.
 - Stata SE version 16.1. With extra packages installed by the scripts. "SE" is
   necessary since we create a large number of variables to implement the
   expanded (quadratic form) lasso. Stata 16.1
   is the same version used by the original authors (although they used the MP version
   which we do not have access to). We have found that Stata 17 cause minor differences in results because of how the default lasso tunings change which variables are included (and then which observations have this non-missing).
-- R 4.2.2, with gt 0.8.0, dplyr 1.0.10, janitor 2.1.0, here 1.0.1, and readr 2.1.3 packages.
+- R 4.2.2, with gt 0.8.0, dplyr 1.1.0, janitor 2.2.0, here 1.0.1, and readr 2.1.4 packages.
   R is only used for compiling and formatting results, the versions should not
   be important.
 

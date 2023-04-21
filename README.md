@@ -43,7 +43,7 @@ time.
 ## Running the replication exercise
 
 1. In order to run our replication exercise, first download the replication package zip-file
-listed in the references and unpack the zip-file in the `1401611-V1` directory.
+listed in the references and save it in the `1401611-V1` directory.
 
 2. In order to run with Stata 16, as the original authors, modify (if necessary) the definition
 of `STATA16` near the top of `setup.sh`. There is also a STATA17 reference for the purpose
